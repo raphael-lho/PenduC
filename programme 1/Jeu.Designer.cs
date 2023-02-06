@@ -65,12 +65,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.pictureBox1.Image = global::programme_1.Properties.Resources.C1;
-            this.pictureBox1.Location = new System.Drawing.Point(62, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(381, 268);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -138,7 +133,6 @@
             this.C.TabIndex = 7;
             this.C.Text = "C";
             this.C.UseVisualStyleBackColor = false;
-
             // 
             // D
             // 
@@ -150,7 +144,6 @@
             this.D.TabIndex = 8;
             this.D.Text = "D";
             this.D.UseVisualStyleBackColor = false;
-
             // 
             // H
             // 
@@ -434,7 +427,6 @@
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.Name = "Jeu";
             this.Text = "Jeu";
-
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

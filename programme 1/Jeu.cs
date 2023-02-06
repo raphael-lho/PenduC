@@ -34,11 +34,11 @@ namespace programme_1
             bool verif = false;
             string generationMot = "";
             for (int i = 0; i < motatrouver.Length; i++)
-            {
+        {
                 if (motatrouver[i] == Convert.ToChar(lettretape))
                 {
 
-                }
+        }
                 else
                 {
 
@@ -46,7 +46,7 @@ namespace programme_1
             }
 
             if (!verif)
-            {
+        {
 
             }
 
@@ -56,7 +56,7 @@ namespace programme_1
 
         private void btn_A_click(DataObjectMethodType sender, EventArgs e)
         {
-            
-        }      
+
+        }
     }
 }
