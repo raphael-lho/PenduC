@@ -12,37 +12,51 @@ namespace programme_1
 {
     public partial class Jeu : Form
     {
+
+        public static string motatrouver = "VOITURE";
+        public static string motaafficher = "_______";
+        public static int compteur = 0;
+
+    
         public Jeu()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Jeu_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public static void ChangerIMG(Int32 nbcmpt, PictureBox pb_pendu)
         {
-            pb_pendu.Image = Properties.Resources.C1;
+            pb_pendu.Image = (Image)Properties.Resources.ResourceManager.GetObject("C" + nbcmpt);
             pb_pendu.Refresh();
         }
 
-        public static string motatrouver = "";
-
-        public partial class Jeu : Form
+        public static void Verifier(String lettretape, TextBox txt_afficher)
         {
-            public static string motatrouver = "";
+            bool verif = false;
+            string generationMot = "";
+            for (int i = 0; i < motatrouver.Length; i++)
+            {
+                if (motatrouver[i] == Convert.ToChar(lettretape))
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+
+            if (!verif)
+            {
+
+            }
+
+            motaafficher = generationMot;
+            txt_afficher.Text = motaafficher;
         }
+
+        private void btn_A_click(DataObjectMethodType sender, EventArgs e)
+        {
+            
+        }      
     }
 }

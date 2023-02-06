@@ -138,7 +138,7 @@
             this.C.TabIndex = 7;
             this.C.Text = "C";
             this.C.UseVisualStyleBackColor = false;
-            this.C.Click += new System.EventHandler(this.button3_Click);
+
             // 
             // D
             // 
@@ -150,7 +150,7 @@
             this.D.TabIndex = 8;
             this.D.Text = "D";
             this.D.UseVisualStyleBackColor = false;
-            this.D.Click += new System.EventHandler(this.button4_Click);
+
             // 
             // H
             // 
@@ -434,7 +434,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.Name = "Jeu";
             this.Text = "Jeu";
-            this.Load += new System.EventHandler(this.Jeu_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
