@@ -59,6 +59,9 @@
             this.btn_O = new System.Windows.Forms.Button();
             this.btn_N = new System.Windows.Forms.Button();
             this.pb_pendu = new System.Windows.Forms.PictureBox();
+            this.textBoxTimer = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_pendu)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +81,6 @@
             this.txt_PrenomNom.Name = "txt_PrenomNom";
             this.txt_PrenomNom.Size = new System.Drawing.Size(229, 20);
             this.txt_PrenomNom.TabIndex = 2;
-            this.txt_PrenomNom.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txt_difficulte
             // 
@@ -91,7 +93,7 @@
             // txt_motAtrouver
             // 
             this.txt_motAtrouver.Enabled = false;
-            this.txt_motAtrouver.Location = new System.Drawing.Point(12, 300);
+            this.txt_motAtrouver.Location = new System.Drawing.Point(12, 321);
             this.txt_motAtrouver.Name = "txt_motAtrouver";
             this.txt_motAtrouver.Size = new System.Drawing.Size(509, 20);
             this.txt_motAtrouver.TabIndex = 4;
@@ -101,7 +103,7 @@
             // 
             this.btn_A.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_A.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_A.Location = new System.Drawing.Point(23, 337);
+            this.btn_A.Location = new System.Drawing.Point(12, 347);
             this.btn_A.Name = "btn_A";
             this.btn_A.Size = new System.Drawing.Size(33, 22);
             this.btn_A.TabIndex = 5;
@@ -113,7 +115,7 @@
             // 
             this.btn_B.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_B.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_B.Location = new System.Drawing.Point(62, 337);
+            this.btn_B.Location = new System.Drawing.Point(51, 347);
             this.btn_B.Name = "btn_B";
             this.btn_B.Size = new System.Drawing.Size(33, 22);
             this.btn_B.TabIndex = 6;
@@ -125,7 +127,7 @@
             // 
             this.btn_C.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_C.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_C.Location = new System.Drawing.Point(101, 337);
+            this.btn_C.Location = new System.Drawing.Point(90, 347);
             this.btn_C.Name = "btn_C";
             this.btn_C.Size = new System.Drawing.Size(33, 22);
             this.btn_C.TabIndex = 7;
@@ -137,7 +139,7 @@
             // 
             this.btn_D.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_D.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_D.Location = new System.Drawing.Point(140, 337);
+            this.btn_D.Location = new System.Drawing.Point(129, 347);
             this.btn_D.Name = "btn_D";
             this.btn_D.Size = new System.Drawing.Size(33, 22);
             this.btn_D.TabIndex = 8;
@@ -149,7 +151,7 @@
             // 
             this.btn_H.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_H.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_H.Location = new System.Drawing.Point(296, 337);
+            this.btn_H.Location = new System.Drawing.Point(285, 347);
             this.btn_H.Name = "btn_H";
             this.btn_H.Size = new System.Drawing.Size(33, 22);
             this.btn_H.TabIndex = 12;
@@ -161,7 +163,7 @@
             // 
             this.btn_G.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_G.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_G.Location = new System.Drawing.Point(257, 337);
+            this.btn_G.Location = new System.Drawing.Point(246, 347);
             this.btn_G.Name = "btn_G";
             this.btn_G.Size = new System.Drawing.Size(33, 22);
             this.btn_G.TabIndex = 11;
@@ -173,7 +175,7 @@
             // 
             this.btn_F.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_F.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_F.Location = new System.Drawing.Point(218, 337);
+            this.btn_F.Location = new System.Drawing.Point(207, 347);
             this.btn_F.Name = "btn_F";
             this.btn_F.Size = new System.Drawing.Size(33, 22);
             this.btn_F.TabIndex = 10;
@@ -185,7 +187,7 @@
             // 
             this.btn_E.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_E.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_E.Location = new System.Drawing.Point(179, 337);
+            this.btn_E.Location = new System.Drawing.Point(168, 347);
             this.btn_E.Name = "btn_E";
             this.btn_E.Size = new System.Drawing.Size(33, 22);
             this.btn_E.TabIndex = 9;
@@ -197,7 +199,7 @@
             // 
             this.btn_L.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_L.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_L.Location = new System.Drawing.Point(453, 337);
+            this.btn_L.Location = new System.Drawing.Point(442, 347);
             this.btn_L.Name = "btn_L";
             this.btn_L.Size = new System.Drawing.Size(33, 22);
             this.btn_L.TabIndex = 16;
@@ -209,7 +211,7 @@
             // 
             this.btn_K.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_K.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_K.Location = new System.Drawing.Point(414, 337);
+            this.btn_K.Location = new System.Drawing.Point(403, 347);
             this.btn_K.Name = "btn_K";
             this.btn_K.Size = new System.Drawing.Size(33, 22);
             this.btn_K.TabIndex = 15;
@@ -221,7 +223,7 @@
             // 
             this.btn_J.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_J.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_J.Location = new System.Drawing.Point(375, 337);
+            this.btn_J.Location = new System.Drawing.Point(364, 347);
             this.btn_J.Name = "btn_J";
             this.btn_J.Size = new System.Drawing.Size(33, 22);
             this.btn_J.TabIndex = 14;
@@ -233,7 +235,7 @@
             // 
             this.btn_I.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_I.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_I.Location = new System.Drawing.Point(336, 337);
+            this.btn_I.Location = new System.Drawing.Point(325, 347);
             this.btn_I.Name = "btn_I";
             this.btn_I.Size = new System.Drawing.Size(33, 22);
             this.btn_I.TabIndex = 13;
@@ -245,7 +247,7 @@
             // 
             this.btn_M.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_M.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_M.Location = new System.Drawing.Point(492, 337);
+            this.btn_M.Location = new System.Drawing.Point(481, 347);
             this.btn_M.Name = "btn_M";
             this.btn_M.Size = new System.Drawing.Size(33, 22);
             this.btn_M.TabIndex = 17;
@@ -257,7 +259,7 @@
             // 
             this.btn_Z.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_Z.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Z.Location = new System.Drawing.Point(511, 365);
+            this.btn_Z.Location = new System.Drawing.Point(500, 375);
             this.btn_Z.Name = "btn_Z";
             this.btn_Z.Size = new System.Drawing.Size(33, 22);
             this.btn_Z.TabIndex = 30;
@@ -269,7 +271,7 @@
             // 
             this.btn_Y.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_Y.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Y.Location = new System.Drawing.Point(472, 365);
+            this.btn_Y.Location = new System.Drawing.Point(461, 375);
             this.btn_Y.Name = "btn_Y";
             this.btn_Y.Size = new System.Drawing.Size(33, 22);
             this.btn_Y.TabIndex = 29;
@@ -281,7 +283,7 @@
             // 
             this.btn_X.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_X.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_X.Location = new System.Drawing.Point(433, 365);
+            this.btn_X.Location = new System.Drawing.Point(422, 375);
             this.btn_X.Name = "btn_X";
             this.btn_X.Size = new System.Drawing.Size(33, 22);
             this.btn_X.TabIndex = 28;
@@ -293,7 +295,7 @@
             // 
             this.btn_W.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_W.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_W.Location = new System.Drawing.Point(394, 365);
+            this.btn_W.Location = new System.Drawing.Point(383, 375);
             this.btn_W.Name = "btn_W";
             this.btn_W.Size = new System.Drawing.Size(33, 22);
             this.btn_W.TabIndex = 27;
@@ -305,7 +307,7 @@
             // 
             this.btn_V.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_V.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_V.Location = new System.Drawing.Point(355, 365);
+            this.btn_V.Location = new System.Drawing.Point(344, 375);
             this.btn_V.Name = "btn_V";
             this.btn_V.Size = new System.Drawing.Size(33, 22);
             this.btn_V.TabIndex = 26;
@@ -317,7 +319,7 @@
             // 
             this.btn_U.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_U.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_U.Location = new System.Drawing.Point(315, 365);
+            this.btn_U.Location = new System.Drawing.Point(304, 375);
             this.btn_U.Name = "btn_U";
             this.btn_U.Size = new System.Drawing.Size(33, 22);
             this.btn_U.TabIndex = 25;
@@ -329,7 +331,7 @@
             // 
             this.btn_T.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_T.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_T.Location = new System.Drawing.Point(276, 365);
+            this.btn_T.Location = new System.Drawing.Point(265, 375);
             this.btn_T.Name = "btn_T";
             this.btn_T.Size = new System.Drawing.Size(33, 22);
             this.btn_T.TabIndex = 24;
@@ -341,7 +343,7 @@
             // 
             this.btn_S.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_S.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_S.Location = new System.Drawing.Point(237, 365);
+            this.btn_S.Location = new System.Drawing.Point(226, 375);
             this.btn_S.Name = "btn_S";
             this.btn_S.Size = new System.Drawing.Size(33, 22);
             this.btn_S.TabIndex = 23;
@@ -353,7 +355,7 @@
             // 
             this.btn_R.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_R.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_R.Location = new System.Drawing.Point(198, 365);
+            this.btn_R.Location = new System.Drawing.Point(187, 375);
             this.btn_R.Name = "btn_R";
             this.btn_R.Size = new System.Drawing.Size(33, 22);
             this.btn_R.TabIndex = 22;
@@ -365,7 +367,7 @@
             // 
             this.btn_Q.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_Q.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Q.Location = new System.Drawing.Point(159, 365);
+            this.btn_Q.Location = new System.Drawing.Point(148, 375);
             this.btn_Q.Name = "btn_Q";
             this.btn_Q.Size = new System.Drawing.Size(33, 22);
             this.btn_Q.TabIndex = 21;
@@ -377,7 +379,7 @@
             // 
             this.btn_P.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_P.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_P.Location = new System.Drawing.Point(120, 365);
+            this.btn_P.Location = new System.Drawing.Point(109, 375);
             this.btn_P.Name = "btn_P";
             this.btn_P.Size = new System.Drawing.Size(33, 22);
             this.btn_P.TabIndex = 20;
@@ -389,7 +391,7 @@
             // 
             this.btn_O.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_O.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_O.Location = new System.Drawing.Point(81, 365);
+            this.btn_O.Location = new System.Drawing.Point(70, 375);
             this.btn_O.Name = "btn_O";
             this.btn_O.Size = new System.Drawing.Size(33, 22);
             this.btn_O.TabIndex = 19;
@@ -401,7 +403,7 @@
             // 
             this.btn_N.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_N.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_N.Location = new System.Drawing.Point(42, 365);
+            this.btn_N.Location = new System.Drawing.Point(31, 375);
             this.btn_N.Name = "btn_N";
             this.btn_N.Size = new System.Drawing.Size(33, 22);
             this.btn_N.TabIndex = 18;
@@ -419,12 +421,40 @@
             this.pb_pendu.TabIndex = 31;
             this.pb_pendu.TabStop = false;
             // 
+            // textBoxTimer
+            // 
+            this.textBoxTimer.Location = new System.Drawing.Point(613, 210);
+            this.textBoxTimer.Name = "textBoxTimer";
+            this.textBoxTimer.Size = new System.Drawing.Size(116, 20);
+            this.textBoxTimer.TabIndex = 32;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(574, 210);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Timer";
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(12, 303);
+            this.progressBar.Maximum = 10;
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(509, 12);
+            this.progressBar.TabIndex = 34;
+
+            // 
             // Jeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxTimer);
             this.Controls.Add(this.pb_pendu);
             this.Controls.Add(this.btn_Z);
             this.Controls.Add(this.btn_Y);
@@ -498,5 +528,8 @@
         private System.Windows.Forms.Button btn_O;
         private System.Windows.Forms.Button btn_N;
         private System.Windows.Forms.PictureBox pb_pendu;
+        private System.Windows.Forms.TextBox textBoxTimer;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }

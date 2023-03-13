@@ -8,19 +8,17 @@ namespace programme_1
     public partial class Jeu : Form
 
     {
-
         public static string motatrouver;
-
         public static string motaafficher;
-
         public static int compteur = 1;
-
         public Int32 dureeTotal = 0;
-
         public Int32 dureeCout = 0;
 
+        private int totaltimer;
         public Timer timer;
+
         List<string> listeMotaTrouver;
+
 
         public Jeu()
 
@@ -34,7 +32,33 @@ namespace programme_1
             Init();
             txt_PrenomNom.Text = LePrenomNomDuJoueur;
             txt_difficulte.Text = LaDifficulteChoisi;
+
+            //timer
+            timer = new Timer(); //Instancie un objet timer de la classe 
+            timer.Interval = 1000;
+            timer.Tick += Timer_Tick;
+            timer.Start();
+  
         }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            dureeTotal++;
+            progressBar.Increment(1);
+            textBoxTimer.Text = dureeTotal + " secondes";
+
+            if (progressBar.Value == 10)
+            {
+                compteur++;
+                ChangerIMG(compteur, pb_pendu);
+                progressBar.Value=(0);
+                dureeCout++;
+                victoire();
+            }
+        }
+
+
+
 
 
         private void Init()
@@ -46,10 +70,12 @@ namespace programme_1
             txt_motAtrouver.Text = motaafficher;
         }
       
-
+        
 
         private void btn_Z_Click(object sender, EventArgs e)
         {
+            progressBar.Value = 0;
+                
             Verifier((sender as Button).Text.ToString(), txt_motAtrouver);
 
             ChangerIMG(compteur, pb_pendu);
@@ -239,11 +265,6 @@ namespace programme_1
             int nbAleatoire = aleatoire.Next(listeATrouver.Count);
             string motchoisi = listeATrouver[nbAleatoire].ToUpper();
             return motchoisi;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
