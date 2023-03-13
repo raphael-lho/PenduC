@@ -13,7 +13,7 @@ namespace programme_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fondback());
+            Application.Run(new menu());
         }
     }
 }

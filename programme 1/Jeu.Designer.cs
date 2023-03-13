@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_PrenomNom = new System.Windows.Forms.TextBox();
             this.txt_difficulte = new System.Windows.Forms.TextBox();
             this.txt_motAtrouver = new System.Windows.Forms.TextBox();
@@ -58,21 +57,15 @@
             this.btn_P = new System.Windows.Forms.Button();
             this.btn_O = new System.Windows.Forms.Button();
             this.btn_N = new System.Windows.Forms.Button();
-            this.pb_pendu = new System.Windows.Forms.PictureBox();
             this.textBoxTimer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pb_pendu = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.FormClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_pendu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(514, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(259, 146);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // txt_PrenomNom
             // 
@@ -411,16 +404,6 @@
             this.btn_N.UseVisualStyleBackColor = false;
             this.btn_N.Click += new System.EventHandler(this.btn_Z_Click);
             // 
-            // pb_pendu
-            // 
-            this.pb_pendu.Image = global::programme_1.Properties.Resources.C1;
-            this.pb_pendu.Location = new System.Drawing.Point(42, 12);
-            this.pb_pendu.Name = "pb_pendu";
-            this.pb_pendu.Size = new System.Drawing.Size(463, 269);
-            this.pb_pendu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_pendu.TabIndex = 31;
-            this.pb_pendu.TabStop = false;
-            // 
             // textBoxTimer
             // 
             this.textBoxTimer.Location = new System.Drawing.Point(613, 210);
@@ -444,7 +427,34 @@
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(509, 12);
             this.progressBar.TabIndex = 34;
-
+            // 
+            // pb_pendu
+            // 
+            this.pb_pendu.Image = global::programme_1.Properties.Resources.C1;
+            this.pb_pendu.Location = new System.Drawing.Point(42, 12);
+            this.pb_pendu.Name = "pb_pendu";
+            this.pb_pendu.Size = new System.Drawing.Size(463, 269);
+            this.pb_pendu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_pendu.TabIndex = 31;
+            this.pb_pendu.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(514, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(259, 146);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // FormClose
+            // 
+            this.FormClose.Cursor = System.Windows.Forms.Cursors.PanSouth;
+            this.FormClose.Location = new System.Drawing.Point(3, 26);
+            this.FormClose.Name = "FormClose";
+            this.FormClose.Size = new System.Drawing.Size(33, 31);
+            this.FormClose.TabIndex = 35;
+            this.FormClose.Text = "<==";
+            this.FormClose.UseVisualStyleBackColor = true;
             // 
             // Jeu
             // 
@@ -452,6 +462,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.FormClose);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxTimer);
@@ -487,10 +498,11 @@
             this.Controls.Add(this.txt_PrenomNom);
             this.Controls.Add(this.pictureBox2);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Jeu";
             this.Text = "Jeu";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_pendu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -531,5 +543,6 @@
         private System.Windows.Forms.TextBox textBoxTimer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Button FormClose;
     }
 }

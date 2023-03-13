@@ -266,5 +266,7 @@ namespace programme_1
             string motchoisi = listeATrouver[nbAleatoire].ToUpper();
             return motchoisi;
         }
+
+      
     }
 }
