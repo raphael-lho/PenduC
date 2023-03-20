@@ -267,6 +267,9 @@ namespace programme_1
             return motchoisi;
         }
 
-      
+        private void FormClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

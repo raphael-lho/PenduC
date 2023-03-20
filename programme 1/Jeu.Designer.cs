@@ -455,13 +455,14 @@
             this.FormClose.TabIndex = 35;
             this.FormClose.Text = "<==";
             this.FormClose.UseVisualStyleBackColor = true;
+            this.FormClose.Click += new System.EventHandler(this.FormClose_Click);
             // 
             // Jeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(816, 489);
             this.Controls.Add(this.FormClose);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.label1);

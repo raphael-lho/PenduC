@@ -34,6 +34,7 @@
             this.scoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paramètreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Pan_SubForm = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +64,7 @@
             this.démarrerToolStripMenuItem.Name = "démarrerToolStripMenuItem";
             this.démarrerToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.démarrerToolStripMenuItem.Text = "Démarrer";
+            this.démarrerToolStripMenuItem.Click += new System.EventHandler(this.démarrerToolStripMenuItem_Click);
             // 
             // scoreToolStripMenuItem
             // 
@@ -82,12 +84,20 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
             this.toolStripMenuItem1.Text = "?";
             // 
+            // Pan_SubForm
+            // 
+            this.Pan_SubForm.Location = new System.Drawing.Point(0, 27);
+            this.Pan_SubForm.Name = "Pan_SubForm";
+            this.Pan_SubForm.Size = new System.Drawing.Size(800, 424);
+            this.Pan_SubForm.TabIndex = 1;
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Pan_SubForm);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "menu";
@@ -107,5 +117,6 @@
         private System.Windows.Forms.ToolStripMenuItem scoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paramètreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.Panel Pan_SubForm;
     }
 }

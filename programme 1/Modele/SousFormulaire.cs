@@ -1,19 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace programme_1
+namespace programme_1.Modele
 {
-    public partial class menu : Form
+    public class SousFormulaire
     {
-        
+        public Panel PanelSousFormlaire;
         public Form activeForm = null;
+
+        public SousFormulaire(Panel panelenvoit)
+        {
+            PanelSousFormlaire = panelenvoit;
+        }
+
         public void openChildForm(Form formEnfant)
         {
             if (activeForm != null)
@@ -23,19 +25,10 @@ namespace programme_1
             formEnfant.TopLevel = false;
             formEnfant.FormBorderStyle = FormBorderStyle.None;
             formEnfant.Dock = DockStyle.Fill;
-            Pan_SubForm.Controls.Add(formEnfant);
-            Pan_SubForm.Tag = formEnfant;
+            PanelSousFormlaire.Controls.Add(formEnfant);
+            PanelSousFormlaire.Tag = formEnfant;
             formEnfant.BringToFront();
             formEnfant.Show();
-        }
-        public menu()
-        {
-            InitializeComponent();
-        }
-
-        private void démarrerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            openChildForm(new fondback());
         }
     }
 }
