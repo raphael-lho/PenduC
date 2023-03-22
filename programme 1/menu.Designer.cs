@@ -117,6 +117,6 @@
         private System.Windows.Forms.ToolStripMenuItem scoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paramètreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.Panel Pan_SubForm;
+        public System.Windows.Forms.Panel Pan_SubForm;
     }
 }

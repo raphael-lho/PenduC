@@ -1,4 +1,5 @@
-﻿using System;
+﻿using programme_1.Modele;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace programme_1
     public partial class menu : Form
     {
         
-        public Form activeForm = null;
+        /*public Form activeForm = null;
         public void openChildForm(Form formEnfant)
         {
             if (activeForm != null)
@@ -27,7 +28,7 @@ namespace programme_1
             Pan_SubForm.Tag = formEnfant;
             formEnfant.BringToFront();
             formEnfant.Show();
-        }
+        }*/
         public menu()
         {
             InitializeComponent();
@@ -35,7 +36,8 @@ namespace programme_1
 
         private void démarrerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openChildForm(new fondback());
+            SousFormulaire SF = new SousFormulaire(Pan_SubForm);
+            SF.openChildForm(new fondback());
         }
     }
 }
