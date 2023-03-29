@@ -1,13 +1,16 @@
-﻿using System;
+﻿using programme_1.Modele;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace programme_1.Modele
 {
     public class SousFormulaire
     {
+        
         public Panel PanelSousFormlaire;
         public Form activeForm = null;
 

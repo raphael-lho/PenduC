@@ -86,6 +86,7 @@
             // 
             // Pan_SubForm
             // 
+            this.Pan_SubForm.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.Pan_SubForm.Location = new System.Drawing.Point(0, 27);
             this.Pan_SubForm.Name = "Pan_SubForm";
             this.Pan_SubForm.Size = new System.Drawing.Size(800, 424);
@@ -117,6 +118,6 @@
         private System.Windows.Forms.ToolStripMenuItem scoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paramètreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.Panel Pan_SubForm;
+        public System.Windows.Forms.Panel Pan_SubForm;
     }
 }
