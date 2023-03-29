@@ -1,4 +1,5 @@
-﻿using System;
+﻿using programme_1.Modele;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -38,7 +39,7 @@ namespace programme_1
             timer.Interval = 1000;
             timer.Tick += Timer_Tick;
             timer.Start();
-  
+
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace programme_1
             {
                 compteur++;
                 ChangerIMG(compteur, pb_pendu);
-                progressBar.Value=(0);
+                progressBar.Value = (0);
                 dureeCout++;
                 victoire();
             }
@@ -69,13 +70,13 @@ namespace programme_1
             motaafficher = genererMotAfficher(motatrouver);
             txt_motAtrouver.Text = motaafficher;
         }
-      
-        
+
+
 
         private void btn_Z_Click(object sender, EventArgs e)
         {
             progressBar.Value = 0;
-                
+
             Verifier((sender as Button).Text.ToString(), txt_motAtrouver);
 
             ChangerIMG(compteur, pb_pendu);
@@ -270,6 +271,8 @@ namespace programme_1
         private void FormClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            SousFormulaire SF = new SousFormulaire((System.Windows.Forms.Application.OpenForms["menu"] as menu).Pan_SubForm);
+            SF.openChildForm(new fondback());
         }
     }
 }

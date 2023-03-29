@@ -14,7 +14,7 @@ namespace programme_1
     public partial class menu : Form
     {
         
-        public Form activeForm = null;
+        /*public Form activeForm = null;
         public void openChildForm(Form formEnfant)
         {
             if (activeForm != null)
@@ -28,7 +28,7 @@ namespace programme_1
             Pan_SubForm.Tag = formEnfant;
             formEnfant.BringToFront();
             formEnfant.Show();
-        }
+        }*/
         public menu()
         {
             InitializeComponent();
